@@ -39,6 +39,6 @@ export const sendInvoice = (chatId) => {
     })
     .catch((error) => {
       console.error("Error sending invoice", error);
-      alert("Error");
+      alert(error);
     });
 };
