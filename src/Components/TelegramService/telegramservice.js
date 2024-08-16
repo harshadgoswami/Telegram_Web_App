@@ -9,7 +9,7 @@ export const sendInvoice = (chatId) => {
     title: "Pro Membership",
     description: "Get the Pro Membership to unlock all features.",
     payload: "pro_membership_payment",
-    provider_token: REACT_APP_TELEGRAM_PAYMENT_TOKEN, // Payment token from your provider
+    provider_token: "284685063:TEST:YzU2N2EzNTM3OWU5", // Payment token from your provider
     start_parameter: "get_access",
     currency: "USD",
     prices: [
