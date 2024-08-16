@@ -10,7 +10,7 @@ const tele = window.Telegram.WebApp;
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const [getmeres, setGetmeres] = useState("");
+  const [getmeres, setGetmeres] = useState(0);
 
   useEffect(() => {
     tele.ready();
@@ -20,7 +20,7 @@ function App() {
         "https://api.telegram.org/bot7400362995:AAFgeVRWfOgdMCBrestpWynPdmkKvgJZpKc/getMe"
       )
       .then((res) => {
-        setGetmeres(JSON.stringify(res.data));
+        setGetmeres(Number(res.data.result.id));
       });
   });
 
