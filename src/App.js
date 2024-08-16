@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./Components/Card/Card";
 import Cart from "./Components/Cart/Cart";
+import axios from "axios";
 const { getData } = require("./db/db");
 const foods = getData();
 
@@ -9,9 +10,18 @@ const tele = window.Telegram.WebApp;
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [getmeres, setGetmeres] = useState("");
 
   useEffect(() => {
     tele.ready();
+
+    axios
+      .get(
+        "https://api.telegram.org/bot7400362995:AAFgeVRWfOgdMCBrestpWynPdmkKvgJZpKc/getMe"
+      )
+      .then((res) => {
+        setGetmeres(JSON.stringify(res.data));
+      });
   });
 
   const onAdd = (food) => {
@@ -48,7 +58,8 @@ function App() {
   return (
     <>
       <h1 className="heading">Order Food</h1>
-      <Cart cartItems={cartItems} onCheckout={onCheckout}/>
+      <div>{getmeres}</div>
+      <Cart cartItems={cartItems} onCheckout={onCheckout} />
       <div className="cards__container">
         {foods.map((food) => {
           return (
