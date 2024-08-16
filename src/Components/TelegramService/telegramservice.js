@@ -9,10 +9,9 @@ export const sendInvoice = (chatId) => {
     title: "Pro Membership",
     description: "Get the Pro Membership to unlock all features.",
     payload: "pro_membership_payment",
-    provider_token:
-      "pk_live_51NBgI1SC49OQXf3zsXH1BWBrMfoYHbgXxRCugHlqh0mz4IkRzXkL5r8Y2rPOZVe36P64sxFcZUnOLrONGBqyGv3h00LGydwf0J", // Payment token from your provider
+    provider_token: "", // Payment token from your provider
     start_parameter: "get_access",
-    currency: "USD",
+    currency: "XTR",
     prices: [
       { label: "Pro Membership", amount: 500 }, // Amount in the smallest unit (cents)
     ],
