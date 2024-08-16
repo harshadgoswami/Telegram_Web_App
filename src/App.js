@@ -3,6 +3,7 @@ import "./App.css";
 import Card from "./Components/Card/Card";
 import Cart from "./Components/Cart/Cart";
 import axios from "axios";
+import { sendInvoice } from "./Components/TelegramService/telegramservice";
 const { getData } = require("./db/db");
 const foods = getData();
 
@@ -53,6 +54,9 @@ function App() {
   const onCheckout = () => {
     tele.MainButton.text = "Pay :)";
     tele.MainButton.show();
+
+    //do checkout here
+    sendInvoice(getmeres.toString());
   };
 
   return (
