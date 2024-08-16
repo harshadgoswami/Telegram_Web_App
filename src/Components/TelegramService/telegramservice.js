@@ -35,8 +35,10 @@ export const sendInvoice = (chatId) => {
     .post(`${TELEGRAM_API_URL}/sendInvoice`, payload)
     .then((response) => {
       console.log("Invoice sent successfully", response.data);
+      alert("Invoice sent successfully");
     })
     .catch((error) => {
       console.error("Error sending invoice", error);
+      alert("Error");
     });
 };
