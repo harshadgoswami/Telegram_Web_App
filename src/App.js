@@ -56,7 +56,7 @@ function App() {
     tele.MainButton.show();
 
     //do checkout here
-    sendInvoice(getmeres.toString());
+    sendInvoice("7130021259".toString());
   };
 
   return (
