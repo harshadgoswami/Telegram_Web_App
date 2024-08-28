@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REACT_APP_TELEGRAM_PAYMENT_TOKEN = `7400362995:AAFgeVRWfOgdMCBrestpWynPdmkKvgJZpKc`;
+const REACT_APP_TELEGRAM_PAYMENT_TOKEN = `[BOT_TOKEN_HERE]`;
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${REACT_APP_TELEGRAM_PAYMENT_TOKEN}`;
 
 export const sendInvoice = (chatId) => {
@@ -9,7 +9,7 @@ export const sendInvoice = (chatId) => {
     title: "Pro Membership",
     description: "Get the Pro Membership to unlock all features.",
     payload: "pro_membership_payment",
-    provider_token: "284685063:TEST:YzU2N2EzNTM3OWU5", // Payment token from your provider
+    provider_token: "[PAYMENT_PROVIDER_TOKEN_HERE]", // Payment token from your provider
     //start_parameter: "get_access",
     currency: "USD",
     prices: [

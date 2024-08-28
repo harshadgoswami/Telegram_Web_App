@@ -17,9 +17,7 @@ function App() {
     tele.ready();
 
     axios
-      .get(
-        "https://api.telegram.org/bot7400362995:AAFgeVRWfOgdMCBrestpWynPdmkKvgJZpKc/getMe"
-      )
+      .get("https://api.telegram.org/bot[BOTTOKENHERE]/getMe")
       .then((res) => {
         setGetmeres(Number(res.data.result.id));
       });
